@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+	<head>
+		<title>Citibank Online | Memeber Get Member | Citibank SGGCB</title>
+		<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		Social Media Sharing
+	</body>
+</html>
+
+<script language="JavaScript">
+$(document).ready(function($) {
+	var sharingTitle = 'Get S$120 cash rewards from Citi';
+	var sharingUrl = 'https://globalcommon.uat.citibank.com.sg/english/mgm/social_media_sharing.html';
+	var sharingDescription = 'Sign up and enjoy the benefits of Citi Credit Cards.';
+	var sharingImage = 'https://spookybenjamin.github.io/MGM/mainBanner_small.jpg';
+	
+	$('head').append('<link rel="canonical" href="' + sharingUrl + '">');
+	$('head').append('<meta property="og:title" content="' + sharingTitle + '">');
+	$('head').append('<meta property="og:url" content="' + sharingUrl + '">');
+	$('head').append('<meta property="og:description" content="' + sharingDescription + '">');
+	$('head').append('<meta property="og:image" content="' + sharingImage + '">');
+});
+</script>
