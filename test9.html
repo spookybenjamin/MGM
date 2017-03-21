@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#">
+	<head>
+		<title>Citibank Online Memeber Get Member</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="canonical" href="https://globalcommon.uat.citibank.com.sg/APFA/mgmp/social-media-sharing.html"/>
+		
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Get S$120 cash rewards from Citi" />
+		<meta property="og:url" content="https://globalcommon.uat.citibank.com.sg/APFA/mgmp/social-media-sharing.html" />
+		<meta property="og:description" content="Sign up and enjoy the benefits of Citi Credit Cards." />
+		<meta property="og:image" content="https://globalcommon.uat.citibank.com.sg/APFA/mgmp/images/sharing-banner.jpg" />
+
+		<link rel="stylesheet" type="text/css" href="https://globalcommon.uat.citibank.com.sg/COA/portal/themes/responsive/css/bootstrap.min.css" />
+		
+		<script type="text/javascript" language="JavaScript" src="https://globalcommon.uat.citibank.com.sg/COA/portal/themes/responsive/js/jquery-1.12.1.min.js"></script>
+		
+		<script language="JavaScript">
+		$(document).ready(function($) {
+			var currentURL = document.URL;
+			var rceFullLink = decodeURIComponent(currentURL.substring(currentURL.indexOf('rceURL') + ('rceURL').length + 1));
+			console.log('rceFullLink : ' + rceFullLink);
+			
+			$('#applyForCreCard').click(function(event) {
+				//window.location.href = rceFullLink;
+				window.open(rceFullLink);
+			});
+		});		
+		</script>
+		
+		<style type="text/css">
+		@media only screen and (max-width: 767px) {
+			.socialMedia-header {
+				height: 250px;
+				margin: 0 -15px -50px;
+			}
+		}
+		
+		@media only screen and (min-width: 768px) {
+			.socialMedia-header{
+				height: 550px;
+				margin: 0px -20px -50px;
+			}
+		}
+		
+		.mainBannerBgImage {
+			background-image: url("/APFA/mgmp/images/mainBanner.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		
+		.socialMedia-body {
+			background-color: #fff;
+			padding: 20px;
+			margin-top: 20px;
+		}
+		
+		.socialMediaSharingText {
+			margin-top:-10px;
+		}
+		
+		.spaceHeight20px {
+			height: 20px;
+		}
+		</style>
+	</head>
+
+	<body class="theme-light container"> 
+		<div class="contain-fluid" lang="en">
+			<section id="socialMedia">
+				<div class="socialMedia-header mainBannerBgImage"></div>
+				<div class="socialMedia-body">
+					<div id="socialMediaContent">				
+						<div class="text-center socialMediaSharingText">
+							<h2>You deserve the credit, not the fees.<br/>With Citi Simplicity+ get 10% interest back.</h2>
+							<label>Apply & Get cash back Rp500.500</label>
+						</div>	
+						<div class="spaceHeight20px"></div>					
+						<div class="col-xs-12 text-center">
+							<div class="spaceHeight20px"></div>
+							<button class="btn btn-primary" id="applyForCreCard">Apply For A Credit Card</button>
+						</div>
+					</div>
+				</div>
+			</section>				
+		</div>
+	</body>
+</html>
