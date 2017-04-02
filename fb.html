@@ -12,47 +12,7 @@
 <script language="JavaScript">
 $(document).ready(function($) {
 
-function statusChangeCallback(response) {
-	if (response.status === 'connected') {
-	}
-}
 
-function checkLoginState() {
-	FB.getLoginStatus(function(response) {
-	  statusChangeCallback(response);
-	});
-}
-/* production appID 
-appId      : '998302086963542',
-*/
-/* Staging appID 
-appId      : '1182603988469397',
-*/
-/* UAT appID 
-appId      : '511006205762305',
-*/
-/* Simplysity appID 
-appId      : '640509789456124',
-*/
-window.fbAsyncInit = function() {
-FB.init({
-	appId      : '998302086963542',
-	cookie     : true,
-	xfbml      : true,
-	version    : 'v2.5'
-});
-  FB.getLoginStatus(function(response) {
-	statusChangeCallback(response);
-  });
-};
-
-(function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) return;
-	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/sdk.js";
-	fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
 
 var mobile = function() {
 	return {
