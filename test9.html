@@ -1,90 +1,449 @@
 <!DOCTYPE html>
-<html xmlns:og="http://ogp.me/ns#">
-	<head>
-		<title>Citibank Online Memeber Get Member</title>
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<link rel="canonical" href="https://globalcommon.uat.citibank.com.sg/APFA/mgmp/social-media-sharing.html"/>
-		
-		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Get S$120 cash rewards from Citi" />
-		<meta property="og:url" content="https://globalcommon.uat.citibank.com.sg/APFA/mgmp/social-media-sharing.html" />
-		<meta property="og:description" content="Sign up and enjoy the benefits of Citi Credit Cards." />
-		<meta property="og:image" content="https://globalcommon.uat.citibank.com.sg/APFA/mgmp/images/sharing-banner.jpg" />
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" type="text/css" href="https://globalcommon.uat.citibank.com.sg/COA/portal/themes/responsive/css/bootstrap.min.css" />
-		
-		<script type="text/javascript" language="JavaScript" src="https://globalcommon.uat.citibank.com.sg/COA/portal/themes/responsive/js/jquery-1.12.1.min.js"></script>
-		
-		<script language="JavaScript">
-		$(document).ready(function($) {
-			var currentURL = document.URL;
-			var rceFullLink = decodeURIComponent(currentURL.substring(currentURL.indexOf('rceURL') + ('rceURL').length + 1));
-			console.log('rceFullLink : ' + rceFullLink);
+<link type="text/css" rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>-->
+
+<script language="JavaScript">
+$(document).ready(function($) {
+
+function statusChangeCallback(response) {
+	if (response.status === 'connected') {
+	}
+}
+
+/*function checkLoginState() {
+	FB.getLoginStatus(function(response) {
+	  statusChangeCallback(response);
+	});
+}*/
+/* production appID 
+appId      : '998302086963542',
+*/
+/* Staging appID 
+appId      : '1182603988469397',
+*/
+/* UAT appID 
+appId      : '511006205762305',
+*/
+/* Simplysity appID 
+appId      : '640509789456124',
+*/
+/*window.fbAsyncInit = function() {
+FB.init({
+	appId      : '998302086963542',
+	cookie     : true,
+	xfbml      : true,
+	version    : 'v2.5'
+});
+  FB.getLoginStatus(function(response) {
+	statusChangeCallback(response);
+  });
+};
+
+(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+*/
+var mobile = function() {
+	return {
+		detect : function(e, t) {
+			e = navigator.userAgent;
+			if (/android|bb|meego|mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i
+					.test(e)
+					|| /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i
+							.test(e.substring(0, 4)))
+				return true;
+			else
+				return false
+		}
+	}
+}();
+
+	if (mobile.detect()) {
+		alert('I am from MBOL');
+	} else {
+		alert('I am from CBOL');
+	}
+	//$('[data-toggle="tooltip"]').tooltip();
+	
+	$('#emailAddressContainer').attr('tabindex', -1);
+	$('#emailAddressContainer').focus();
+	var emailCount = 0;
+	var emailArray = [];
+	
+	/*$('#emailAddressContainer').focus(function(event) {
+		$('#emailInputBox').focus();
+	});*/
+	
+	/*$('#emailInputBox').focusin(function(event) {
+		$('#emailInputBox').removeClass('restrictInputLength');
+	});
+	
+	$('#emailInputBox').focusout(function(event) {
+		$('#emailInputBox').addClass('restrictInputLength');
+	});*/
+	
+	/*$('#sendReminderButton').click(function(event) {
+		$('#sendReminderButton').attr('title', 'User Info <a href="#" class="close" data-dismiss="alert">×</a>');
+		$('#sendReminderButton').popover('show');
+	});*/
+	$('[data-toggle="popover"]').popover({
+        placement : 'bottom',
+        html : true,
+        title : '<a href="#" class="close" data-dismiss="alert">×</a>',
+        content : 'Sorry, Please try again'
+    });
+    $(document).on("click", ".popover .close" , function(){
+        $(this).parents(".popover").popover('hide');
+    });
+
+	$('#emailInputBox').keyup(function(event) {
+	  	if(event.keyCode == 188 || event.keyCode == 32) { // 188: Comma; 32: Space
+			var emailAddressEntered = $('#emailInputBox').val().replace(',', '');
+			emailAddressEntered = $.trim(emailAddressEntered); // Trim the spacing
 			
-			$('#applyForCreCard').click(function(event) {
-				//window.location.href = rceFullLink;
-				window.open(rceFullLink);
+			if (emailAddressEntered === '') {
+				console.log('Only Space Entered, skipping ......');
+				return;
+			}
+			
+			console.log('Email Address Entered: ' + emailAddressEntered);
+			
+			if ($.inArray(emailAddressEntered, emailArray) > -1) {
+				console.log(emailAddressEntered + " is duplicated email address, skipping ......");
+				$('#emailInputBox').val('');
+				$('#emailInputBox').focus();
+				
+				return;
+			}
+			
+			emailCount += 1;
+			emailArray.push(emailAddressEntered);
+			
+			var emailBlockHTML = '';
+			emailBlockHTML += '<div id="' + emailCount + 'friendEmailGroup' + '" class="btn-group">';
+			emailBlockHTML += '    <button id="' + emailCount + 'friendEmailValue' + '" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" data-container="body" title="' + emailAddressEntered + '">';
+			emailBlockHTML +=         emailAddressEntered;
+			emailBlockHTML += '    </button>';
+			emailBlockHTML += '    <button id="' + emailCount + 'friendEmailCloseButton' + '" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove"></button>';
+			emailBlockHTML += '</div>';
+			
+			$('#emailInputBox').before(emailBlockHTML);
+			$('#emailInputBox').val('');
+			
+			//bindCloseEventForEmailGroup(emailCount + 'friendEmailCloseButton');
+			//$('[data-toggle="tooltip"]').tooltip();
+			bindCloseEventForEmailGroup(emailCount, emailAddressEntered);
+			$('#' + emailCount + 'friendEmailValue').tooltip();
+			
+			//var validEmailAddressResult = isValidEmail(emailAddressEntered);
+			var validEmailAddressResult = checkEmail(emailAddressEntered);
+			if (validEmailAddressResult) {
+				console.log('Valid Email Address');
+			} else { // Mark invalid email address block in different colour
+				console.log('Email Address is NOT VALID !!!');
+				$('#' + emailCount + 'friendEmailValue').addClass('invalidEmailAddress');
+				$('#' + emailCount + 'friendEmailCloseButton').addClass('invalidEmailAddress');
+				/*$('#emailInputBox').val('');
+				$('#emailInputBox').focus();*/
+			}
+			
+			console.log("After Adding --- Email Array : " + emailArray);
+	  	}
+	});
+	
+	$('#inviteFriendButton').click(function(event) {
+		if ($('button[class*="invalidEmailAddress"]').length === 0) { // All email addresses are valid
+			emailCount= 0;
+			
+			$('div[id$="friendEmailGroup"]').each(function(index) {
+				this.remove();
 			});
-		});		
-		</script>
 		
-		<style type="text/css">
-		@media only screen and (max-width: 767px) {
-			.socialMedia-header {
-				height: 250px;
-				margin: 0 -15px -50px;
-			}
+			$('#inviteFriendButton').text('Invitations Sent');
+			$('#inviteFriendButton').prepend('<span class="glyphicon glyphicon-ok">&nbsp;');
+			
+			setTimeout(function() {
+				$('#inviteFriendButton').text('Invite via Email');
+			}, 3000);
+		} else { // There are invalid email addresses
+			alert('Please remove invalid email address before submitting');
 		}
-		
-		@media only screen and (min-width: 768px) {
-			.socialMedia-header{
-				height: 550px;
-				margin: 0px -20px -50px;
-			}
-		}
-		
-		.mainBannerBgImage {
-			background-image: url("/APFA/mgmp/images/mainBanner.jpg");
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-		
-		.socialMedia-body {
-			background-color: #fff;
-			padding: 20px;
-			margin-top: 20px;
-		}
-		
-		.socialMediaSharingText {
-			margin-top:-10px;
-		}
-		
-		.spaceHeight20px {
-			height: 20px;
-		}
-		</style>
-	</head>
+	});
+	
+	function bindCloseEventForEmailGroup(emailGroupIndex, emailValue) {
+		$('#' + emailGroupIndex + 'friendEmailCloseButton').click(function(event) {
+			// Remove the email value from email array
+			emailArray.splice($.inArray(emailValue, emailArray), 1);
+			console.log("After Removing --- Email Array : " + emailArray);
+			
+			$('#' + emailGroupIndex + 'friendEmailValue').tooltip('destroy')
+			$('#' + emailGroupIndex + 'friendEmailGroup').remove();
+		});
+	}
 
-	<body class="theme-light container"> 
-		<div class="contain-fluid" lang="en">
-			<section id="socialMedia">
-				<div class="socialMedia-header mainBannerBgImage"></div>
-				<div class="socialMedia-body">
-					<div id="socialMediaContent">				
-						<div class="text-center socialMediaSharingText">
-							<h2>You deserve the credit, not the fees.<br/>With Citi Simplicity+ get 10% interest back.</h2>
-							<label>Apply & Get cash back Rp500.500</label>
-						</div>	
-						<div class="spaceHeight20px"></div>					
-						<div class="col-xs-12 text-center">
-							<div class="spaceHeight20px"></div>
-							<button class="btn btn-primary" id="applyForCreCard">Apply For A Credit Card</button>
-						</div>
-					</div>
-				</div>
-			</section>				
+
+	var title = 'Get S$120 cash rewards from Citi';
+	//var sharingUrl = 'https://globalcommon.uat.citibank.com.sg/english/mgm/social_media_sharing.html';
+	var url = 'https://spookybenjamin.github.io/MGM/test3.html';
+	var description = 'Sign up and enjoy the benefits of Citi Credit Cards.';
+	var image = 'https://globalcommon.uat.citibank.com.sg/english/mgm/mainBanner_small.jpg';
+	var rceurl = 'https://uat2.sggcb.globalcommonbuild.citibank.com/accope/index.html#accope?pcode=MC440&scode=WW5ARCE2';
+	
+	$('#shareOnLinkedIn').click(function(event) {
+		/*var url = 'https://www.ipb.citibank.com.sg/english/static/refer_friends/index.htm';
+		var title = 'Get S$120 cash rewards from Citi';
+		var summary = '&lt;br/&gt;Sign up and enjoy the benefits of Citi Credit Cards.';*/
+		
+		//window.open("http://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title=" + title + "&summary=" + summary);
+		//window.open("http://www.linkedin.com/shareArticle?mini=true&url=" + "https://spookybenjamin.github.io/MGM/test9.html");
+		//window.open("https://www.linkedin.com/cws/share?token&isFramed=false&url=" + "https://spookybenjamin.github.io/MGM/social-media-sharing.html?referrerCode=123456urisfh789");
+		//window.open("social-media-sharing.html?referrerCode=123456urisfh789");
+		//window.open("https://www.linkedin.com/cws/share?token&isFramed=false&url="+"https://globalcommon.uat.citibank.com.sg/APFA/mgmp/social-media-sharing.html");
+		//window.open("https://www.linkedin.com/cws/share?token&isFramed=false&url="+ url + "?title=" + title + "&description=" + description + "&image=" + image);
+		//window.open("redirect.html?title=" + encodeURIComponent(title) + "&description=" + encodeURIComponent(description) + "&image=" + encodeURIComponent(image) + "&rceurl=" + encodeURIComponent(rceurl));
+		
+		/*var payload = {
+			"comment": "Local Testing",
+			"content": {
+				"title": "Get S$120 cash rewards from Citi",
+				"description": "Sign up and enjoy the benefits of Citi Credit Cards.",
+				"submitted-url": "https://www.ipb.citibank.com.sg/english/static/refer_friends/index.htm",  
+				"submitted-image-url": "https://www.ipb.citibank.com.sg/english/static/refer_friends/images/banner_images/mainBanner.jpg"
+			},
+			"visibility": {
+				"code": "anyone"
+			}
+		};
+		
+		$.ajax({
+			type:  'post',
+			url:   'https://api.linkedin.com/v1/people/~/shares?format=json',
+			data:  payload,
+			dataType: 'json',
+			contentType: 'application/json',
+			success: function(data) {
+				
+			},
+			error: function(){
+				
+			}
+		});*/
+	});
+	
+	var sharingTitle = '';
+	var sharingDescription = '';
+	var rceURL = '';
+	var interMediateURL = '';
+	
+	$('#shareOnWhatsApp').click(function(event) {
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			var whatsapp_url = "whatsapp://send?text=" + encodeURIComponent($sharingDescription) + encodeURIComponent($rceURL);
+			window.location.href = whatsapp_url;
+		}
+	});
+	
+	$('#shareOnFacebook').click(function(event) {
+		/*FB.ui({
+			method: 'feed',
+			name: ' This is tsting title',
+			link: 'https://www.ipb.citibank.com.sg/english/forms/english/refer_friends/new_client.htm?ecid=MGCLNIPCCAEN17&rcid=11qasqewq1&name=sfsfsa',
+			picture: 'https://www.citibank.co.id/english/static/refer_friends/images/linkedin_img.jpg',
+			description: sharingDescription
+		});*/
+		window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent("https://spookybenjamin.github.io/MGM/test9.html"), 'Facebook', 'width=800,height=600');
+	});
+	
+	$('#shareOnLinkedIn').click(function(event) {
+		window.open("https://www.linkedin.com/cws/share?token&isFramed=false&url=" + encodeURIComponent($interMediateURL) + encodeURIComponent($referenceCode));
+	});
+	
+	
+function isValidEmail(email)
+{
+//if(isEmpty(email)) return false;
+var emailStr = email;
+var emailPat=/^(.+)@(.+)$/
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"
+var validChars="\[^\\s" + specialChars + "\]"
+var quotedUser="(\"[^\"]*\")"
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/
+var atom=validChars + '+'
+var word="(" + atom + "|" + quotedUser + ")"
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$")
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$")
+var matchArray=emailStr.match(emailPat)
+if (matchArray==null)
+{
+return false
+}
+var user=matchArray[1]
+var domain=matchArray[2]
+if (user.match(userPat)==null)
+{
+return false
+}
+var IPArray=domain.match(ipDomainPat)
+if (IPArray!=null)
+{
+for (var i=1;i<=4;i++)
+{
+if (IPArray[i]>255)
+{
+return false
+}
+}
+return true
+}
+var domainArray=domain.match(domainPat)
+if (domainArray==null)
+{
+return false
+}
+var atomPat=new RegExp(atom,"g")
+var domArr=domain.match(atomPat)
+var len=domArr.length
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3)
+{
+return false
+}
+if (len<2)
+{
+return false
+}
+return true;
+}
+
+
+function checkEmail(email) {
+	var validationReg = new RegExp("^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$");
+	return validationReg.test(email);
+}
+
+});
+</script>
+</head>
+
+<body class="container-fluid">
+<!--<div id="no-more-tables">
+  <table>
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Company</th>
+			<th class="numeric">Price</th>
+			<th class="numeric">Change</th>
+			<th class="numeric">Change %</th>
+			<th class="numeric">Open</th>
+			<th class="numeric">High</th>
+			<th class="numeric">Low</th>
+			<th class="numeric">Volume</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td data-title="Code">AAC</td>
+			<td data-title="Company">AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+			<td data-title="Price" class="numeric">$1.38</td>
+			<td data-title="Change" class="numeric">-0.01</td>
+			<td data-title="Change %" class="numeric">-0.36%</td>
+			<td data-title="Open" class="numeric">$1.39</td>
+			<td data-title="High" class="numeric">$1.39</td>
+			<td data-title="Low" class="numeric">$1.38</td>
+			<td data-title="Volume" class="numeric">9,395</td>
+		</tr>
+	</tbody>
+</table>
+</div>-->
+
+
+<p>social media sharing</p>
+<div id="socialMediaSection">
+	<!--<img src="facebook_icon.png" alt="Facebook" id="facebook_icon">-->
+	<!--<picture>
+	  <source srcset="facebook_icon.png" media="(max-width: 767px)">
+	  <source srcset="icn-facebook-intro.png">
+	  <img src="icn-facebook-intro.png" alt="Facebook">
+	</picture>-->
+	<div class="socialMediaDescription" id="shareOnFacebook">Hello, Facebook</div>
+</div>
+
+<div id="referralStatusSection" class="container-fluid">
+	<div id="referralStatusTableMobileHeader" class="row">
+		<div class="col-xs-12">Sort by Time</div>
+	</div>
+	<div id="referralStatusTableDesktopHeader" class="row">
+		<div class="col-sm-5 col-md-5 col-lg-5">
+			<div class="col-sm-9 col-md-9 col-lg-9">Name&nbsp;:</div>
+			<div class="col-sm-3 col-md-3 col-lg-3">&nbsp;</div>
 		</div>
-	</body>
+		<div class="col-sm-5 col-md-5 col-lg-5">
+			<div class="col-sm-6 col-md-6 col-lg-6">Product&nbsp;:</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">Date&nbsp;:</div>
+		</div>
+		<div class="col-sm-2 col-md-2 col-lg-2">
+			<div class="col-sm-12 col-md-12 col-lg-12">Status&nbsp;:</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">xinyu.wu@citi.com</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 textFloatRight"><img src="link-icon.png" class="socialLinkIcon"></div>
+		</div>
+		<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Credit Card</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 textFloatRight">02/15/2017</div>
+		</div>
+		<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+			<div class="col-xs-6 col-sm-12 col-md-12 col-lg-12">Pending</div>
+			<div class="col-xs-6 col-sm-12 col-md-12 col-lg-12 textFloatRight">Button</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">ming.li@citi.com</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 textFloatRight"><img src="link-icon.png" class="socialLinkIcon"></div>
+		</div>
+		<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Credit Card</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 textFloatRight">01/01/2017</div>
+		</div>
+		<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+			<div class="col-xs-6 col-sm-12 col-md-12 col-lg-12">Pending</div>
+			<div class="col-xs-6 col-sm-12 col-md-12 col-lg-12 textFloatRight">Button</div>
+		</div>
+	</div>
+</div>
+
+
+<p>email address</p>
+<!--<div id="emailAddressContainer" contenteditable="true">-->
+<div id="emailAddressContainer">
+	<input type="text" id="emailInputBox" class="restrictInputLength"></input>
+
+</div>
+<p>&nbsp;</p>
+<button type="button" id="inviteFriendButton" class="btn btn-info btn-lg">Invite via Email</button> 
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<img id="shareOnLinkedIn" src="share_on_linkedin.png" alt="Share on LinkedIn">
+
+<p>&nbsp;</p>
+<!--<button id="sendReminderButton" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Oops, please try again.">
+  Send Reminder
+</button>-->
+<button type="button" class="btn btn-default" data-toggle="popover">Send Reminder</button>
+</body>
 </html>
+
