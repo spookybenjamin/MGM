@@ -248,9 +248,30 @@ var mobile = function() {
 	
 	$('#shareOnWhatsApp').click(function(event) {
 		//if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-			var whatsapp_url = "whatsapp://send?text=" + encodeURIComponent(sharingDescription) + encodeURIComponent(rceURL);
-			window.location.href = whatsapp_url;
+		//	var whatsapp_url = "whatsapp://send?text=" + encodeURIComponent(sharingDescription) + encodeURIComponent(rceURL);
+		//	window.location.href = whatsapp_url;
 		//}
+		var whatsapp_url = "whatsapp://send?text=" + encodeURIComponent(sharingDescription) + encodeURIComponent(rceURL);
+		
+		$.ajax({
+		  type: 'HEAD',
+		  url: whatsapp_url,
+		  success: function() {
+			window.location=whatsapp_url;   
+		  },
+		  error: function() {
+			alert("Whatspp not installed");
+			 //if thin Device open  in  URL 
+			 //if Thick 
+			 if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
+				 window.location.href = ‘https://play.google.com/store/apps/details?id=com.whatsapp &hl=en';
+			 }
+			 if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
+				 window.location.href = ‘https://itunes.apple.com/id/app/whatsapp-messenger/id310633997?mt=8 ';
+			 }
+			 
+
+		  }
 	});
 	
 	$('#shareOnFacebook').click(function(event) {
