@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script language="JavaScript">
+	$(document).ready(function($) {
+		var sharingDescription = 'Sign up and enjoy the benefits of Citi Credit Cards';
+		var sharingFullURL = 'https://globalcommon.uat.citibank.com.sg/gcb/landing_page/creditcard/mgmcardreferee/index.htm?referrerConsent=Y&ECID=MGWPNSGCCAENCB&referrerCode=fj78iRdslkfX';
+		
+		$('#mgmLineAPPBtnMobile').click(function(event) {
+			//if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				var viber_url = 'http://line.me/R/msg/text/?' + encodeURIComponent(sharingFullURL)
+				console.log('viber_url : ' + viber_url);
+				window.location.href = viber_url;
+			//}
+		});		
+	});
+	</script>
+</head>
+
+<body class="container-fluid">
+	<div id="socialMediaSharingSection" class="container-fluid">
+		<img id="mgmLineAPPBtnMobile" src="LINE_logo.svg.png" alt="Line" width="50" height="50" />
+		<img id="mgmViberAPPBtnMobile" src="viber.jpg" alt="Line" width="50" height="50" />
+		<img src="wechat-logo-preview.png" alt="Line" width="50" height="50" />
+	</div>
+</body>
+</html>
