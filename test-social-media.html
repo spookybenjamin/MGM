@@ -35,9 +35,9 @@
 		});
 		
 		$('#mgmWeChatAppBtnMobile').click(function(event) {
-			//alert('WeChat');
+			alert('WeChat');
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-				var wechat_url = 'weixin://dl/groupchat' + encodeURIComponent(sharingFullURL);
+				var wechat_url = 'weixin://dl/groupchat/' + encodeURIComponent(sharingFullURL);
 				console.log('wechat_url : ' + wechat_url);
 				window.location.href = wechat_url;
 			}
