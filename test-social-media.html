@@ -18,7 +18,8 @@
 		$('#mgmLineAPPBtnMobile').click(function(event) {
 			alert('Line');
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-				var line_url = 'http://line.me/R/msg/text/?' + encodeURIComponent(sharingFullURL);
+				//var line_url = 'http://line.me/R/msg/text/?' + encodeURIComponent(sharingFullURL);
+				var line_url = 'line://msg/text/' + encodeURIComponent(sharingFullURL);
 				console.log('line_url : ' + line_url);
 				window.location.href = line_url;
 			}
