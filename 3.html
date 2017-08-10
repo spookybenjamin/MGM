@@ -123,7 +123,7 @@
 
 <script language="JavaScript">
   //document.querySelector('#onMenuShareAppMessage').onclick = function () {
-	//  alert('hello');
+  //  alert('hello');
   //};
 //$(document).ready(function($) {
   wx.config({
@@ -131,7 +131,7 @@
       appId: 'wx574d7363cff2be5c',
       timestamp: 1502345152,
       nonceStr: '3530b6b6d9134842957bd71fede23795',
-      signature: 'dba487acdea59b5166c7de72f45335c326ae855b',
+      signature: '6d6667cfd0a02a7f111a6767f912c783f4003d43',
       jsApiList: [
         'checkJsApi',
         'onMenuShareTimeline',
@@ -174,7 +174,7 @@
   wx.ready(function () {
   // 1 判断当前版本是否支持指定 JS 接口，支持批量判断
   document.querySelector('#checkJsApi').onclick = function () {
-	  alert('Checking API');
+    alert('Checking API');
     wx.checkJsApi({
       jsApiList: [
         'onMenuShareAppMessage'
@@ -189,7 +189,7 @@
   // 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
   document.querySelector('#onMenuShareAppMessage').onclick = function () {
   //$('#onMenuShareAppMessage').click(function(event) {
-	  alert('fff');
+    alert('fff');
     wx.onMenuShareAppMessage({
       title: '互联网之子 方倍工作室',
       desc: '在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。',
