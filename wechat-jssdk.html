@@ -41,7 +41,7 @@
 		function getWeChatAccessToken() {
 			console.log('Start fetching WeChat access token by App ID and App Secret');
 			
-			var url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' + WeChat_AppId + '&secret=' + WeChat_AppSecret & '&callback=theFunctionName';
+			var url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' + WeChat_AppId + '&secret=' + WeChat_AppSecret + '&callback=theFunctionName';
 			console.log('URL : ' + url);
 
 			$.ajax({
