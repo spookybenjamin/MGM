@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	Testing
+                
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<script>
+	$(document).ready(function($) {
+		var WeChat_AppId 		= 'wx574d7363cff2be5c';
+		var WeChat_AppSecret 	= '60631aba34be48c2f3e795410755e08c';
+		var WeChat_accessToken	= '';
+		var WeChat_nonceStr 	= '';
+		var WeChat_signature 	= '';
+		var WeChat_timestamp 	= '';
+		var currentTimestamp 	= new Date().getTime();
+                                
+		var testAPIURL = 'http://api.map.baidu.com/telematics/v3/weather?location=%E4%B8%8A%E6%B5%B7&output=json&ak=Xx5PHV3gXX1vkpIrfxldPV8vwthBytms';
+                                
+		WeChat_timestamp = localStorage.getItem('WeChat_timestamp');
+		
+		if (WeChat_timestamp === undefined || WeChat_timestamp === null) {
+			console.log('No last accessing WeChat JSSDK timestamp in local storage, creating a new timestamp ......');
+			localStorage.setItem('WeChat_timestamp', currentTimestamp);
+
+			getWeChatSignature();
+		} else {
+			console.log('Found last accessing WeChat JSSDK timestamp in local storage ......');
+			var timeDiff = (currentTimestamp - WeChat_timestamp) / (1000 * 60 * 60);
+			console.log('Time Difference : ' + timeDiff + " hours");
+
+			if (timeDiff > 2) {
+				console.log('More than 2 hours, need to refresh signature cache ......');
+				getWeChatSignature();
+			}
+		}
+
+		function getWeChatSignature() {
+			getWeChatAccessToken();
+		}
+                                
+		function getWeChatAccessToken() {
+			console.log('Start fetching WeChat access token by App ID and App Secret');
+			
+			var url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' + WeChat_AppId + '&secret=' + WeChat_AppSecret & '&callback=theFunctionName';
+			console.log('URL : ' + url);
+
+			$.ajax({
+				url: url,
+				type: "GET",
+				dataType: 'jsonp',
+				cache: false,
+				success: function(response){
+					console.log('Access Token API Result : ' + response);
+					console.log('Access Token : ' + response.access_token);
+
+					WeChat_accessToken = response.access_token;
+					localStorage.setItem('WeChat_accessToken', WeChat_accessToken);
+				}
+			});
+		}
+                                
+		function getWeChatJSSDKSignature() {
+
+		}
+	});
+	</script>
+</body>
+</html>
