@@ -1,0 +1,30 @@
+src 文件夹
+你的应用代码位于 src 文件夹中。 所有的 Angular 组件、模板、样式、图片以及你的应用所需的任何东西都在那里。 这个文件夹之外的文件都是为构建应用提供支持用的。
+
+app/app.component.{ts,html,css,spec.ts} : 使用 HTML 模板、CSS 样式和单元测试定义 AppComponent 组件。 它是根组件，随着应用的成长它会成为一棵组件树的根节点。
+app/app.module.ts : 定义 AppModule，根模块为 Angular 描述如何组装应用。
+index.html : 这是别人访问你的网站看到的主页面的 HTML 文件。 大多数情况下你都不用编辑它。 在构建应用时，CLI 会自动把所有 js 和 css 文件添加进去，所以你不必在这里手动添加任何 <script> 或 <link> 标签。
+main.ts : 这是应用的主要入口点。 
+styles.css : 这里是你的全局样式。 大多数情况下，你会希望在组件中使用局部样式，以利于维护，不过那些会影响你整个应用的样式你还是需要集中存放在这里。
+
+
+
+Angular 组件
+组件是 Angular 应用中的基本构造块。 它们在屏幕上显示数据，监听用户输入，并且根据这些输入执行相应的动作。
+
+AppComponent 壳的三个实现文件：
+	1. app.component.ts — 组件的类代码，这是用 TypeScript 写的。
+	2. app.component.html — 组件的模板，这是用 HTML 写的。
+	3. app.component.css — 组件的私有 CSS 样式。
+	
+	
+@Component 是个装饰器函数，用于为该组件指定 Angular 所需的元数据。
+CLI 自动生成了三个元数据属性：
+	1. selector — 组件的选择器（CSS 元素选择器）
+	2. templateUrl — 组件模板文件的位置。
+	3. styleUrls — 组件私有 CSS 样式表文件的位置。
+CSS 元素选择器 app-heroes 用来在父组件的模板中匹配 HTML 元素的名称，以识别出该组件。
+
+ngOnInit 是一个生命周期钩子，Angular 在创建完组件后很快就会调用 ngOnInit。这里是放置初始化逻辑的好地方。
+
+始终要 export 这个组件类，以便在其它地方（比如 AppModule）导入它。
